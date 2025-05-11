@@ -349,12 +349,15 @@ M._defaults = {
       max_tokens = 4096,
     },
     ["infomaniak-mistral24b"] = {
+      __inherited_from = "infomaniak",
       model = "mistral24b",
     },
     ["infomaniak-reasoning"] = {
+      __inherited_from = "infomaniak",
       model = "reasoning",
     },
     ["infomaniak-llama3"] = {
+      __inherited_from = "infomaniak",
       model = "llama3",
     }
   },
