@@ -3,7 +3,7 @@
 
 local P = require("avante.providers")
 local Utils = require("avante.utils")
-local OpenAI = require("avante.providers.openai")
+local OpenAI = require("avante.providers").openai
 local Config = require("avante.config")
 
 ---@class AvanteProviderFunctor
