@@ -307,6 +307,7 @@ M._defaults = {
     model = "mistral24b",
     timeout = 30000, -- Timeout in milliseconds
     max_tokens = 5000,
+    stream = true,
   },
   ---To add support for custom provider, follow the format below
   ---See https://github.com/yetone/avante.nvim/wiki#custom-providers for more details
