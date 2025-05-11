@@ -19,6 +19,7 @@ M.role_map = {
   system = "system",
 }
 
+---@param prompt_opts AvantePromptOptions
 function M:parse_curl_args(prompt_opts)
   local provider_conf, request_body = P.parse_config(self)
   local headers = {
