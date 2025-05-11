@@ -301,6 +301,12 @@ M._defaults = {
     temperature = 0,
     max_tokens = 20480,
   },
+  ---@type AvanteSupportedProvider
+  infomaniak = {
+    endoint = "https://api.infomaniak.com/1",
+    timeout = 30000, -- Timeout in milliseconds
+    max_tokens = 5000,
+  },
   ---To add support for custom provider, follow the format below
   ---See https://github.com/yetone/avante.nvim/wiki#custom-providers for more details
   ---@type {[string]: AvanteProvider}
@@ -342,6 +348,15 @@ M._defaults = {
       model = "us.anthropic.claude-3-7-sonnet-20250219-v1:0",
       max_tokens = 4096,
     },
+    ["infomaniak-mistral24b"] = {
+      model = "mistral24b",
+    },
+    ["infomaniak-reasoning"] = {
+      model = "reasoning",
+    },
+    ["infomaniak-llama3"] = {
+      model = "llama3",
+    }
   },
   ---Specify the special dual_boost mode
   ---1. enabled: Whether to enable dual_boost mode. Default to false.

@@ -581,6 +581,18 @@ Given its early stage, `avante.nvim` currently supports the following basic func
 >
 > ```
 >
+> For Infomaniak
+>
+> ```sh
+> export INFOMANIAK_LLM_API_KEY=your-api-key
+> export INFOMANIAK_LLM_PRODUCT_ID=your-product-id
+> ```
+
+
+
+
+
+>
 > Note: The aws_session_token is optional and only needed when using temporary AWS credentials
 
 1. Open a code file in Neovim.
