@@ -11,7 +11,6 @@ local M = {}
 
 M.api_key_name = "INFOMANIAK_LLM_API_TOKEN"
 M.product_id_name = "INFOMANIAK_LLM_PRODUCT_ID"
-setmetatable(M, { __index = OpenAI })
 
 M.role_map = {
   user = "user",
@@ -67,6 +66,9 @@ function M:parse_messages(opts)
 
   return messages
 end
+M.is_disable_stream = OpenAI.is_disable_stream
+M.parse_response = OpenAI.parse_response
+
 
 
 return M
