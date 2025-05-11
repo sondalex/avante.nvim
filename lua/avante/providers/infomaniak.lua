@@ -42,7 +42,7 @@ function M:parse_curl_args(prompt_opts)
 
   headers["Authorization"] = "Bearer " .. api_key
   return {
-    url = Utils.url_join(provider_conf.endpoint, "ai/", product_id, "/openai/chat/completions"),
+    url = Utils.url_join(provider_conf.endpoint, product_id, "/openai/chat/completions"),
     proxy = provider_conf.proxy,
     insecure = provider_conf.allow_insecure,
     headers = headers,
