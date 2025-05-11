@@ -304,6 +304,7 @@ M._defaults = {
   ---@type AvanteSupportedProvider
   infomaniak = {
     endoint = "https://api.infomaniak.com/1",
+    model = "mistral24b",
     timeout = 30000, -- Timeout in milliseconds
     max_tokens = 5000,
   },
