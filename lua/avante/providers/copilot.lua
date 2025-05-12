@@ -294,16 +294,17 @@ end
 
 function M.setup()
   local copilot_token_file = Path:new(copilot_path)
- ---@type string
+ ---@type string | nil
+  local env_token
+  -- @type string
   local oauth_token
   if M.api_key_name ~= nil and M.api_key_name ~= "" then
-    local env_token = os.getenv(M.api_key_name) --[[@as string?]]
-    if env_token == nil then
-      error("Environment variable '" .. M.api_key_name .. "' is not set")
-    end
-    oauth_token = env_token
-  else
+    env_token = os.getenv(M.api_key_name)
+  end
+  if env_token == nil then
     oauth_token = H.get_oauth_token()
+  else
+    oauth_token = env_token
   end
   if not M.state then M.state = {
     github_token = nil,
