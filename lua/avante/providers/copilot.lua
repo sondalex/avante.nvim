@@ -294,10 +294,20 @@ end
 
 function M.setup()
   local copilot_token_file = Path:new(copilot_path)
-
+ ---@type string
+  local oauth_token
+  if M.api_key_name ~= nil and M.api_key_name ~= "" then
+    local env_token = os.getenv(M.api_key_name) --[[@as string?]]
+    if env_token == nil then
+      error("Environment variable '" .. M.api_key_name .. "' is not set")
+    end
+    oauth_token = env_token
+  else
+    oauth_token = H.get_oauth_token()
+  end
   if not M.state then M.state = {
     github_token = nil,
-    oauth_token = H.get_oauth_token(),
+    oauth_token = oauth_token
   } end
 
   -- Load and validate existing token
