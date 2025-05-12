@@ -202,7 +202,7 @@ end
 ---@field github_token CopilotToken?
 M.state = nil
 
-M.api_key_name = ""
+M.api_key_name = "GITHUB_COPILOT_TOKEN"
 M.tokenizer_id = "gpt-4o"
 M.role_map = {
   user = "user",
