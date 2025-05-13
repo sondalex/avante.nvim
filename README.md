@@ -318,7 +318,7 @@ _See [config.lua#L9](./lua/avante/config.lua) for the full config_
 
 ```lua
 {
-  ---@alias Provider "claude" | "openai" | "azure" | "gemini" | "cohere" | "copilot" | "infomaniak" | string
+  ---@alias Provider "claude" | "openai" | "azure" | "gemini" | "cohere" | "copilot" | "infomaniak" | "xai" |string
   provider = "claude", -- The provider used in Aider mode or in the planning phase of Cursor Planning Mode
   ---@alias Mode "agentic" | "legacy"
   mode = "agentic", -- The default mode for interaction. "agentic" uses tools to automatically generate code, "legacy" uses the old planning method to generate code.
@@ -581,12 +581,19 @@ Given its early stage, `avante.nvim` currently supports the following basic func
 >
 > ```
 >
-> For Infomaniak
+> For Infomaniak:
 >
 > ```sh
 > export INFOMANIAK_LLM_API_KEY=your-api-key
 > export INFOMANIAK_LLM_PRODUCT_ID=your-product-id
 > ```
+
+> For XAI:
+>
+> ```sh
+> export XAI_LLM_API_KEY=your-api-key
+> ```
+
 
 
 

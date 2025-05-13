@@ -309,6 +309,13 @@ M._defaults = {
     max_tokens = 5000,
     stream = true,
   },
+  --- @type AvanteSupportedProvider
+  xai = {
+    endpoint = "https://api.x.ai/v1",
+    timeout = 30000,
+    model = "grok-3-fast-beta",
+    reasoning_effort = "low"
+  },
   ---To add support for custom provider, follow the format below
   ---See https://github.com/yetone/avante.nvim/wiki#custom-providers for more details
   ---@type {[string]: AvanteProvider}
@@ -361,6 +368,18 @@ M._defaults = {
     ["infomaniak-llama3"] = {
       __inherited_from = "infomaniak",
       model = "llama3",
+    },
+    ["xai-grok-3-beta"] = {
+       __inherited_from = "xai"
+    },
+    ["xai-grok-3-fast-beta"] = {
+       __inherited_from = "xai"
+    },
+    ["xai-grok-3-mini-beta"] = {
+       __inherited_from = "xai"
+    },
+    ["grok-3-mini-fast-beta"] = {
+       __inherited_from = "xai"
     }
   },
   ---Specify the special dual_boost mode

@@ -21,6 +21,7 @@ local DressingState = { winid = nil, input_winid = nil, input_bufnr = nil }
 ---@field ollama AvanteProviderFunctor
 ---@field vertex_claude AvanteProviderFunctor
 ---@field infomaniak AvanteInfomaniakProvider
+---@field xai AvanteXAIProvider
 local M = {}
 
 ---@class EnvironmentHandler
