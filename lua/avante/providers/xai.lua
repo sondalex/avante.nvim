@@ -10,7 +10,6 @@ local OpenAI = require("avante.providers").openai
 local M = {}
 
 M.api_key_name = "XAI_LLM_API_TOKEN"
-M.product_id_name = "XAI_LLM_PRODUCT_ID"
 
 setmetatable(M, { __index = OpenAI })
 
@@ -20,5 +19,10 @@ M.role_map = {
   assistant = "assistant",
   system = "system",
 }
+
+function M.parse_api_key()
+  local api_key = os.getenv(M.api_key_name)
+  return api_key
+end
 
 return M;
